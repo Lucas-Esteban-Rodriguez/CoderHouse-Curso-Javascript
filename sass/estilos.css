@@ -1,0 +1,126 @@
+body {
+  overflow: hidden;
+}
+
+.boton-numero, .boton-operador {
+  font-size: 2rem;
+  background-color: #343a40;
+  border: none;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 50px;
+}
+
+.boton-numero:hover, .boton-operador:hover {
+  background-color: #495057;
+}
+
+.boton-numero:active, .boton-operador:active {
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+}
+
+.boton-operador {
+  color: #00a8e8;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 630px;
+}
+
+section .contenedor-calculadora {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.6fr 1.4fr;
+      grid-template-rows: 0.6fr 1.4fr;
+  -ms-grid-columns: 1.5fr 0.5fr;
+      grid-template-columns: 1.5fr 0.5fr;
+      grid-template-areas: "resultado resultado" "numeros operadores" "numeros operadores";
+  width: 500px;
+  height: 620px;
+  background-color: #495057;
+}
+
+section .contenedor-calculadora .contenedor-resultado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #495057;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: resultado;
+}
+
+section .contenedor-calculadora .contenedor-resultado p {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: resultado;
+          animation-name: resultado;
+  width: 400px;
+  height: 100px;
+}
+
+@-webkit-keyframes resultado {
+  from {
+    border-right: 3px solid white;
+  }
+  to {
+    border-right: none;
+  }
+}
+
+@keyframes resultado {
+  from {
+    border-right: 3px solid white;
+  }
+  to {
+    border-right: none;
+  }
+}
+
+section .contenedor-calculadora .contenedor-numeros {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  background-color: #343a40;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: numeros;
+}
+
+section .contenedor-calculadora .contenedor-operadores {
+  border-left: 2px solid #495057;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  background-color: #343a40;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: operadores;
+}
+/*# sourceMappingURL=estilos.css.map */
