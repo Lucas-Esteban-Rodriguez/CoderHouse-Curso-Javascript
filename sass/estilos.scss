@@ -4,7 +4,7 @@ $celeste: #00a8e8;
 
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .boton-numero {
     font-size: 2rem;
@@ -38,7 +38,7 @@ section {
         "numeros operadores"
         "numeros operadores";
         width: 500px;
-        height: 620px;
+        height: 600px;
         background-color: $gris-claro;
         .contenedor-resultado {
             display: flex;
@@ -52,14 +52,6 @@ section {
                 animation-name: resultado;
                 width: 400px;
                 height: 100px;
-            }
-            @keyframes resultado {
-                from {
-                    border-right: 3px solid white;
-                }
-                to {
-                    border-right: none;
-                }
             }
         }
         .contenedor-numeros {

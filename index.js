@@ -1,10 +1,9 @@
-const uno = 1
-const dos = 2
-const tres = 3
-const cuatro = 4
-const cinco = 5
-const seis = 6
-const siete = 7
-const ocho = 8
-const nueve = 9
-const cero = 0
+function calculadora(num1,num2,operador) {
+    switch (operador) {
+        case '+':
+            return num1+num2;
+            if (operador == '=') {
+                break;  
+            }
+    }
+}

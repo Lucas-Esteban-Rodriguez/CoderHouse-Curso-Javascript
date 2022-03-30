@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .boton-numero, .boton-operador {
@@ -45,7 +45,7 @@ section .contenedor-calculadora {
       grid-template-columns: 1.5fr 0.5fr;
       grid-template-areas: "resultado resultado" "numeros operadores" "numeros operadores";
   width: 500px;
-  height: 620px;
+  height: 600px;
   background-color: #495057;
 }
 
@@ -75,24 +75,6 @@ section .contenedor-calculadora .contenedor-resultado p {
           animation-name: resultado;
   width: 400px;
   height: 100px;
-}
-
-@-webkit-keyframes resultado {
-  from {
-    border-right: 3px solid white;
-  }
-  to {
-    border-right: none;
-  }
-}
-
-@keyframes resultado {
-  from {
-    border-right: 3px solid white;
-  }
-  to {
-    border-right: none;
-  }
 }
 
 section .contenedor-calculadora .contenedor-numeros {
