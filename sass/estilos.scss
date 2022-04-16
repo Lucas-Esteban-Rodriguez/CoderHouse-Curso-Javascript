@@ -6,6 +6,13 @@ $celeste: #00a8e8;
 body {
     overflow-x: hidden;
 }
+.contenedor__historial {
+    position: absolute;
+    top: 50px;
+}
+.historial {
+    display: none;
+}
 .boton-numero {
     font-size: 2rem;
     background-color: $gris-oscuro;

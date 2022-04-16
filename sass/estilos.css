@@ -2,6 +2,15 @@ body {
   overflow-x: hidden;
 }
 
+.contenedor__historial {
+  position: absolute;
+  top: 50px;
+}
+
+.historial {
+  display: none;
+}
+
 .boton-numero, .boton-operador {
   font-size: 2rem;
   background-color: #343a40;
