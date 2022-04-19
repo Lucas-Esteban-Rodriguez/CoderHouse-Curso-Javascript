@@ -8,38 +8,35 @@
     <link rel="stylesheet" href="sass/estilos.css"> 
 </head>
 <body>
-    <div class="contenedor__historial" id="contenedor__historial">
-        <!-- <button type="button" id="btn__historial">Ver historial de resultados</button> -->
-        <div class="historial">
-            <h1>Historial de resultados</h1>
-            <ul id="historial"></ul>
-        </div>
+    <div class="contenedor__historial">
+        <h1>Historial</h1>
+        <ul id="ul"></ul>
     </div>
     <section>
         <div class="contenedor-calculadora">
             <div class="contenedor-resultado">
-                <p></p>
+                <p id="text"></p>
             </div>
             <div class="contenedor-numeros">
-                <button class="boton-numero">1</button>
-                <button class="boton-numero">2</button>
-                <button class="boton-numero">3</button>
-                <button class="boton-numero">4</button>
-                <button class="boton-numero">5</button>
-                <button class="boton-numero">6</button>
-                <button class="boton-numero">7</button>
-                <button class="boton-numero">8</button>
-                <button class="boton-numero">9</button>
-                <button class="boton-numero">0</button>
-                <button class="boton-numero">.</button>
-                <button class="boton-numero">=</button>
+                <button class="boton-numero" id="uno">1</button>
+                <button class="boton-numero" id="dos">2</button>
+                <button class="boton-numero" id="tres">3</button>
+                <button class="boton-numero" id="cuatro">4</button>
+                <button class="boton-numero" id="cinco">5</button>
+                <button class="boton-numero" id="seis">6</button>
+                <button class="boton-numero" id="siete">7</button>
+                <button class="boton-numero" id="ocho">8</button>
+                <button class="boton-numero" id="nueve">9</button>
+                <button class="boton-numero" id="cero">0</button>
+                <button class="boton-numero" id="coma">.</button>
+                <button class="boton-numero" id="igual">=</button>
             </div>
             <div class="contenedor-operadores">
-                <button class="boton-operador"><img src="/img/remove.png" alt="remove" width="60px"></button>
-                <button class="boton-operador">/</button>
-                <button class="boton-operador">*</button>
-                <button class="boton-operador">-</button>
-                <button class="boton-operador">+</button>
+                <button class="boton-operador" id="remove"><img src="/img/remove.png" alt="remove" width="60px"></button>
+                <button class="boton-operador" id="division">/</button>
+                <button class="boton-operador" id="multiplicacion">*</button>
+                <button class="boton-operador" id="resta">-</button>
+                <button class="boton-operador" id="suma">+</button>
             </div>
         </div>
     </section>

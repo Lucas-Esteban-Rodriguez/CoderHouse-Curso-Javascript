@@ -72,14 +72,20 @@ section .contenedor-calculadora .contenedor-resultado {
 }
 
 section .contenedor-calculadora .contenedor-resultado p {
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: resultado;
-          animation-name: resultado;
+  color: white;
   width: 400px;
   height: 100px;
+  font-size: 5rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 section .contenedor-calculadora .contenedor-numeros {
