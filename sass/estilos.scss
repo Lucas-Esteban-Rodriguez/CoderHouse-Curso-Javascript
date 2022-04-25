@@ -5,6 +5,9 @@ $celeste: #00a8e8;
 
 body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .contenedor__historial {
     position: absolute;
@@ -44,6 +47,23 @@ section {
         width: 500px;
         height: 600px;
         background-color: $gris-claro;
+        .Reiniciar {
+            margin-top: 10px;
+            margin-left: 10px;
+            position: absolute;
+            border: none;
+            background-color: red;
+            color: white;
+            width: 40px;
+            height: 40px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover {
+                background-color: lightcoral;
+            }
+        }
         .contenedor-resultado {
             display: flex;
             justify-content: center;
@@ -51,10 +71,11 @@ section {
             background-color: $gris-claro;
             grid-area: resultado;
             p {
+                overflow: hidden;
                 color: white;
                 width: 400px;
                 height: 100px;
-                font-size: 5rem;
+                font-size: 4rem;
                 margin: 0;
                 display: flex;
                 align-items: center;

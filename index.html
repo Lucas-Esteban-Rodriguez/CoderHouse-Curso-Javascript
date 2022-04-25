@@ -9,34 +9,36 @@
 </head>
 <body>
     <div class="contenedor__historial">
+        <button id="reiniciarHistorial" onclick="removeItem()">Reiniciar Historial</button>
         <h1>Historial</h1>
         <ul id="ul"></ul>
     </div>
     <section>
         <div class="contenedor-calculadora">
+            <button class="Reiniciar" onclick="Reiniciar()">C</button>
             <div class="contenedor-resultado">
                 <p id="text"></p>
             </div>
             <div class="contenedor-numeros">
-                <button class="boton-numero" id="uno">1</button>
-                <button class="boton-numero" id="dos">2</button>
-                <button class="boton-numero" id="tres">3</button>
-                <button class="boton-numero" id="cuatro">4</button>
-                <button class="boton-numero" id="cinco">5</button>
-                <button class="boton-numero" id="seis">6</button>
-                <button class="boton-numero" id="siete">7</button>
-                <button class="boton-numero" id="ocho">8</button>
-                <button class="boton-numero" id="nueve">9</button>
-                <button class="boton-numero" id="cero">0</button>
-                <button class="boton-numero" id="coma">.</button>
-                <button class="boton-numero" id="igual">=</button>
+                <button class="boton-numero" onclick="MostrarDom('1')" id="uno">1</button>
+                <button class="boton-numero" onclick="MostrarDom('2')" id="dos">2</button>
+                <button class="boton-numero" onclick="MostrarDom('3')" id="tres">3</button>
+                <button class="boton-numero" onclick="MostrarDom('4')" id="cuatro">4</button>
+                <button class="boton-numero" onclick="MostrarDom('5')" id="cinco">5</button>
+                <button class="boton-numero" onclick="MostrarDom('6')" id="seis">6</button>
+                <button class="boton-numero" onclick="MostrarDom('7')" id="siete">7</button>
+                <button class="boton-numero" onclick="MostrarDom('8')" id="ocho">8</button>
+                <button class="boton-numero" onclick="MostrarDom('9')" id="nueve">9</button>
+                <button class="boton-numero" onclick="MostrarDom('0')" id="cero">0</button>
+                <button class="boton-numero" onclick="MostrarDom('.')" id="coma" disabled>.</button>
+                <button class="boton-numero" onclick="Resolver()" id="igual">=</button>
             </div>
             <div class="contenedor-operadores">
-                <button class="boton-operador" id="remove"><img src="/img/remove.png" alt="remove" width="60px"></button>
-                <button class="boton-operador" id="division">/</button>
-                <button class="boton-operador" id="multiplicacion">*</button>
-                <button class="boton-operador" id="resta">-</button>
-                <button class="boton-operador" id="suma">+</button>
+                <button class="boton-operador" onclick="Remove()" id="remove"><img src="/img/remove.png" alt="remove" width="60px"></button>
+                <button class="boton-operador" onclick="MostrarDom('/')" id="division">/</button>
+                <button class="boton-operador" onclick="MostrarDom('*')" id="multiplicacion">*</button>
+                <button class="boton-operador" onclick="MostrarDom('-')" id="resta">-</button>
+                <button class="boton-operador" onclick="MostrarDom('+')" id="suma">+</button>
             </div>
         </div>
     </section>
