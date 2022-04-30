@@ -7,56 +7,46 @@ for (let index = 0; index < localStorage.length; index++) {
 
 // Funciones de agregar, obtener y borrar del Localstorage
 
-function setItem(clave,valor) {
-    localStorage.setItem(clave,valor)
-}
+const setItem = (clave,valor) => {localStorage.setItem(clave,valor)}
 
 function getItem(clave) {
     return localStorage.getItem(clave)
 }
 
-function removeItem() {
+const removeItem = () => {
     localStorage.clear()
     location.reload()
 }
 
-// Obteniendo elemento para utilizar en funciones y declarando variable resultado para el historial
+// Declarando variable resultado para el historial
 
-const texto_calculadora = document.getElementById ('text')
 let resultado
 
 // Armando funciones esenciales: Mostrar elementos en el dom, remover elementos, reiniciar la calculadora y
 // reolver las cuentas
 
-function MostrarDom(e) {
-    texto_calculadora.textContent += e
+const MostrarDom = (e) => {$('#text').append(e)}
+
+const Remove = () => {
+    let text = $('#text').html()
+    $('#text').text(text.substring(0, text.length -1))
 }
 
-function Remove() {
-    let text = texto_calculadora.innerHTML
-    texto_calculadora.innerHTML = text.substring(0, text.length -1)
-}
+const Reiniciar = () => {$('#text').text('')}
 
-function Reiniciar() {
-    texto_calculadora.textContent = ''
-}
-
-function Resolver() {
-    if (texto_calculadora.innerHTML) {
-        let text = texto_calculadora.innerHTML
+const Resolver = () => {
+    if ($('#text').html()) {
+        let text = $('#text').html()
         resultado = eval(text)
-        EnviaralHistorial(texto_calculadora.innerHTML +' = '+ resultado)
+        EnviaralHistorial($('#text').html() +' = '+ resultado)
         let index = localStorage.length
-        setItem(index,texto_calculadora.innerHTML +' = '+ resultado)
-        texto_calculadora.textContent = resultado
+        setItem(index,$('#text').html() +' = '+ resultado)
+        $('#text').text(resultado)
     } else {
-        texto_calculadora.textContent = 'error'
+        $('#text').text('error')
     }
 }
 
 function EnviaralHistorial(dato) {
-    const ul = document.getElementById('ul')
-    const li = document.createElement('li')
-    li.innerHTML = dato
-    ul.appendChild(li)
+    $('#ul').after('<li id="li">'+dato+'</li>')
 }
