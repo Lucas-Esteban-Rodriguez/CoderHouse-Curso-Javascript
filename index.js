@@ -1,9 +1,13 @@
 // Obtener Historial del LocalStorage
 
-for (let index = 0; index < localStorage.length; index++) {
-    let item = getItem(index)
-    EnviaralHistorial(item)
+function mostrarLocalStorage() {
+    for (let index = 0; index < localStorage.length; index++) {
+        let item = getItem(index)
+        EnviaralHistorial(item)
+    }   
 }
+
+localStorage.length > 0 ? mostrarLocalStorage() : alert('No hay historial previo')
 
 // Funciones de agregar, obtener y borrar del Localstorage
 
