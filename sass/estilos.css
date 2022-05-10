@@ -9,6 +9,13 @@ body {
 .contenedor__historial {
   position: absolute;
   top: 50px;
+  left: 50px;
+}
+
+.form {
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
 .boton-numero, .boton-operador {
