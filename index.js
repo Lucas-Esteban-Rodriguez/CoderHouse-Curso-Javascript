@@ -1,12 +1,7 @@
-// Obtener Historial del LocalStorage y mostrar
+//Declarando variables
 
+let resultado
 let historial = []
-
-for (let index = 0; index < localStorage.length; index++) {
-    let item = getItem(index)
-    EnviaralHistorial(item)
-    historial.push(' ' + item)
-}
 
 // Funciones del local storage
 
@@ -17,13 +12,19 @@ function getItem(clave) {
 }
 
 const removeItem = () => {
+    for (let index = 0; index < localStorage.length; index++) {
+        $('#li').remove()
+    }
     localStorage.clear()
-    location.reload()
 }
 
-// Declarando variable resultado para el historial
+// Obtener Historial del LocalStorage y mostrar
 
-let resultado
+for (let index = 0; index < localStorage.length; index++) {
+    let item = getItem(index)
+    EnviaralHistorial(item)
+    historial.push(' ' + item)
+}
 
 // Armando funciones esenciales: Mostrar elementos en el dom, remover elementos, reiniciar la calculadora y
 // reolver las cuentas
@@ -75,9 +76,10 @@ $('#btnEnviar').on('click', function(event) {
         data: JSON.stringify(data),
         contentType: 'application/json'
     }).done(function() {
-        alert('Your mail is sent!');
+        alert('Tu mail fue enviado!');
     }).fail(function(error) {
         alert('Oops... ' + JSON.stringify(error));
     });
 
 })
+
