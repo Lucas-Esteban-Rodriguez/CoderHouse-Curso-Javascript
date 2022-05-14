@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 //Declarando variables
 
 let resultado
 let historial = []
 
->>>>>>> 511df3e0bb50fb5726f682a087a3d88969db8926
 // Funciones del local storage
 
 const setItem = (clave,valor) => {localStorage.setItem(clave,valor)}
@@ -22,19 +19,6 @@ const removeItem = () => {
 }
 
 // Obtener Historial del LocalStorage y mostrar
-<<<<<<< HEAD
-
-let historial = []
-
-for (let index = 0; index < localStorage.length; index++) {
-    let item = getItem(index)
-    EnviaralHistorial(item)
-    historial.push(' ' + item)
-}
-
-// Declarando variable resultado para el historial
-=======
->>>>>>> 511df3e0bb50fb5726f682a087a3d88969db8926
 
 for (let index = 0; index < localStorage.length; index++) {
     let item = getItem(index)
@@ -55,16 +39,11 @@ const Remove = () => {
 const Reiniciar = () => {$('#text').text('')}
 
 const Resolver = () => {
-    if ($('#text').html()) {
-        let text = $('#text').html()
-        resultado = eval(text)
-        EnviaralHistorial($('#text').html() +' = '+ resultado)
-        let index = localStorage.length
-        setItem(index, $('#text').html() +' = '+ resultado)
-        $('#text').text(resultado)
-    } else {
-        $('#text').text('error')
-    }
+    resultado = eval($('#text').html())
+    EnviaralHistorial($('#text').html() +' = '+ resultado)
+    let index = localStorage.length
+    setItem(index, $('#text').html() +' = '+ resultado)
+    $('#text').text(resultado)
 }
 
 function EnviaralHistorial(dato) {
