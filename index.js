@@ -1,13 +1,3 @@
-// Obtener Historial del LocalStorage y mostrar
-
-let historial = []
-
-for (let index = 0; index < localStorage.length; index++) {
-    let item = getItem(index)
-    EnviaralHistorial(item)
-    historial.push(' ' + item)
-}
-
 // Funciones del local storage
 
 const setItem = (clave,valor) => {localStorage.setItem(clave,valor)}
@@ -19,6 +9,16 @@ function getItem(clave) {
 const removeItem = () => {
     localStorage.clear()
     location.reload()
+}
+
+// Obtener Historial del LocalStorage y mostrar
+
+let historial = []
+
+for (let index = 0; index < localStorage.length; index++) {
+    let item = getItem(index)
+    EnviaralHistorial(item)
+    historial.push(' ' + item)
 }
 
 // Declarando variable resultado para el historial
