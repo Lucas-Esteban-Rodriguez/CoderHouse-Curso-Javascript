@@ -2,7 +2,20 @@ $gris-claro:#495057;
 $gris-oscuro:#343a40;
 $celeste: #00a8e8;
 
-
+@keyframes aparecer {
+    to {
+        transform: translateX(0%);
+    }
+}
+.aparecer {
+    animation: aparecer .3s linear forwards;
+}
+.close {
+    display: none;
+}
+.show {
+    display: block;
+}
 body {
     overflow-x: hidden;
     margin: 0;
@@ -37,12 +50,38 @@ body {
     @extend .boton-numero;
     color: $celeste;
 }
+.abrir-operadores {
+    align-self: center;
+    height: 50px;
+    grid-area: btn-abrir;
+    border: none;
+    background-color: $celeste;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+.boton-mas-operadores {
+    border: none;
+    background-color: $celeste;
+    font-size: 1.5rem;
+    color: $gris-oscuro;
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        background-color: lightblue;
+    }
+}
+
 section {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 630px;
     .contenedor-calculadora{
+        overflow: hidden;
         display: grid;
         grid-template-rows: 0.6fr 1.4fr;
         grid-template-columns: 1.5fr 0.5fr;
@@ -102,6 +141,29 @@ section {
             grid-template-columns: 1fr;
             background-color: $gris-oscuro;
             grid-area: operadores;
+            position: relative;
+            .contenedor-mas-operadores {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 1fr;
+                grid-template-areas: 
+                'btn-abrir btns'
+                ;
+                background-color: transparent;
+                position: absolute;
+                width: 145%;
+                height: 100%;
+                right: 0;
+                z-index: 2;
+                transform: translateX(70%);
+                .contenedor-mas-botones {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr 1fr;
+                    grid-area: btns;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
     }
 }

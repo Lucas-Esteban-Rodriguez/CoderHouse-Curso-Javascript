@@ -39,7 +39,7 @@ const Remove = () => {
 const Reiniciar = () => {$('#text').text('')}
 
 const Resolver = () => {
-    resultado = eval($('#text').html())
+    resultado = math.evaluate($('#text').html())
     EnviaralHistorial($('#text').html() +' = '+ resultado)
     let index = localStorage.length
     setItem(index, $('#text').html() +' = '+ resultado)
@@ -49,6 +49,31 @@ const Resolver = () => {
 function EnviaralHistorial(dato) {
     $('#ul').after('<li id="li">'+dato+'</li>')
 }
+
+// Para abrir y cerrar mas operadores
+
+$('#abrirMasOperadores').click(function () {
+    setTimeout(function () {
+
+        $('#abrirMasOperadores').addClass('close')
+        $('#cerrarMasOperadores').removeClass('close')
+
+    },300)
+    
+    $('#contenedorMasOperadores').addClass('aparecer')
+})
+
+$('#cerrarMasOperadores').click(function () {
+    
+    $('#cerrarMasOperadores').addClass('close')
+    $('#abrirMasOperadores').removeClass('close')
+
+    $('#contenedorMasOperadores').removeClass('aparecer')
+
+})
+
+
+
 
 // Email.js
 

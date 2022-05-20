@@ -49,11 +49,25 @@
                 <button class="boton-operador" onclick="MostrarDom('*')" id="multiplicacion">*</button>
                 <button class="boton-operador" onclick="MostrarDom('-')" id="resta">-</button>
                 <button class="boton-operador" onclick="MostrarDom('+')" id="suma">+</button>
+
+                <div class="contenedor-mas-operadores" id="contenedorMasOperadores">
+                    <button class="abrir-operadores" id="abrirMasOperadores"><</button>
+                    <button class="abrir-operadores close" id="cerrarMasOperadores">></button>
+                    <div class="contenedor-mas-botones">
+                        <button class="boton-mas-operadores" onclick="MostrarDom('^')">^</button>
+                        <button class="boton-mas-operadores" onclick="MostrarDom('(')">(</button>
+                        <button class="boton-mas-operadores" onclick="MostrarDom(')')">)</button>
+                        <button class="boton-mas-operadores" onclick="MostrarDom('%')">%</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="math.min.js"></script>
     <script src="index.js"></script>
+
 </body>
 </html>

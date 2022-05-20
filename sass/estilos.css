@@ -1,3 +1,30 @@
+@-webkit-keyframes aparecer {
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes aparecer {
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.aparecer {
+  -webkit-animation: aparecer .3s linear forwards;
+          animation: aparecer .3s linear forwards;
+}
+
+.close {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
@@ -41,6 +68,37 @@ body {
   color: #00a8e8;
 }
 
+.abrir-operadores {
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 50px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: btn-abrir;
+  border: none;
+  background-color: #00a8e8;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-mas-operadores {
+  border: none;
+  background-color: #00a8e8;
+  font-size: 1.5rem;
+  color: #343a40;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.boton-mas-operadores:hover {
+  background-color: lightblue;
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,6 +111,7 @@ section {
 }
 
 section .contenedor-calculadora {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 0.6fr 1.4fr;
@@ -147,5 +206,36 @@ section .contenedor-calculadora .contenedor-operadores {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: operadores;
+  position: relative;
+}
+
+section .contenedor-calculadora .contenedor-operadores .contenedor-mas-operadores {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: 'btn-abrir btns';
+  background-color: transparent;
+  position: absolute;
+  width: 145%;
+  height: 100%;
+  right: 0;
+  z-index: 2;
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+}
+
+section .contenedor-calculadora .contenedor-operadores .contenedor-mas-operadores .contenedor-mas-botones {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: btns;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=estilos.css.map */
