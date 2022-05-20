@@ -51,9 +51,10 @@ body {
     color: $celeste;
 }
 .abrir-operadores {
-    align-self: center;
+    position: absolute;
+    top: 45%;
+    left: -35%;
     height: 50px;
-    grid-area: btn-abrir;
     border: none;
     background-color: $celeste;
     color: white;
@@ -143,19 +144,13 @@ section {
             grid-area: operadores;
             position: relative;
             .contenedor-mas-operadores {
-                display: grid;
-                grid-template-columns: 30% 70%;
-                grid-template-rows: 1fr;
-                grid-template-areas: 
-                'btn-abrir btns'
-                ;
                 background-color: transparent;
                 position: absolute;
-                width: 145%;
+                width: 100%;
                 height: 100%;
                 right: 0;
                 z-index: 2;
-                transform: translateX(70%);
+                transform: translateX(100%);
                 .contenedor-mas-botones {
                     display: grid;
                     grid-template-rows: 1fr 1fr 1fr 1fr;
