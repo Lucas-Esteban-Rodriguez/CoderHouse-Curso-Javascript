@@ -3,7 +3,7 @@
 let resultado
 let historial = []
 
-// Funciones del local storage
+// Funciones del local storage, funcion para enviar items, recibir items y borrar los items.
 
 const setItem = (clave,valor) => {localStorage.setItem(clave,valor)}
 
@@ -50,7 +50,8 @@ function EnviaralHistorial(dato) {
     $('#ul').after('<li id="li">'+dato+'</li>')
 }
 
-// Para abrir y cerrar mas operadores
+// Aqui se define el evento click para que el boton de abrir los operadores extras lo realice, y a su vez
+// este se reemplace por el boton que cerrara estos operadores extras mediante el evento click
 
 $('#abrirMasOperadores').click(function () {
     setTimeout(function () {
